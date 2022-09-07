@@ -1,16 +1,16 @@
 
 const int buz = 11;
-const double A = 440; 
+const double A = 440;    //letter note
 const double B = 493.88;
 const double D = 293.66;
 const double E = 329.63;
 const double Fs = 369.99;
 const double G = 392;
-const double two = 800;
+const double two = 800;  // type of note
 const double four = 400;
 const double eight = 200;
 const double six = 100;
-const double l = 50;
+const double l = 50;    // time between notes
 
 const int button = 2;
 int buttonState = 0;
@@ -23,9 +23,9 @@ void setup() {
 void loop() {
   buttonState = digitalRead(button);
 if (buttonState == HIGH) {
-  tone(buz, D);
+  tone(buz, D); // play note for sixth note
   delay(six);
-  noTone(buz);
+  noTone(buz);  // be quiet for 'l' milliseconds 
   delay(l);
   
   tone(buz, E);
